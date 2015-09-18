@@ -5,7 +5,7 @@ import java.io.{File, BufferedWriter, OutputStreamWriter, FileOutputStream}
  */
 object MyApp extends App{
 	override def main(args:Array[String]): Unit ={
-		val file = new File("/home/martin/test.txt")
+		val file = new File("out.txt")
 		val writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file)))
 		Leeter.leet(args.headOption.getOrElse("boobies!")).foreach(x=>writer.write(s"$x\n"))
 		writer.close()
