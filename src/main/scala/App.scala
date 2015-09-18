@@ -7,7 +7,7 @@ object MyApp extends App{
 	override def main(args:Array[String]): Unit ={
 		val file = new File("/home/martin/test.txt")
 		val writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file)))
-		Leeter.leet("boobies!").foreach(x=>writer.write(s"$x\n"))
+		Leeter.leet(args.headOption.getOrElse("boobies!")).foreach(x=>writer.write(s"$x\n"))
 		writer.close()
 	}
 }
